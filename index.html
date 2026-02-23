@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Família Crocodilo — Calculadora Oficial de Crocodilagem</title>
+  <meta name="description" content="Descubra seu nível de 'crocodilagem' com o quiz oficial da família Crocodilo. Ranking salvo no seu navegador.">
+  <meta property="og:title" content="Família Crocodilo — Calculadora de Crocodilagem" />
+  <meta property="og:description" content="Quem é o maior crocodilo da família? Faça o teste e confira o ranking!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/logo.png" />
+  <meta property="og:locale" content="pt_BR" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="site">
+    <header class="header">
+      <div class="container header__inner">
+        <img src="assets/logo.png" alt="Logo Família Crocodilo" class="header__logo">
+        <h1 class="header__title">Família Crocodilo</h1>
+        <p class="header__lead">Calculadora Oficial de Crocodilagem da Família Crocodilo</p>
+        <div class="header__controls">
+          <button id="themeToggle" class="btn btn--ghost header__theme" aria-pressed="false" aria-label="Ativar modo escuro">🌙</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="card card--entry" aria-labelledby="entry-title">
+      <div class="container">
+        <h2 id="entry-title" class="card__title">Bem-vindo ao quiz de crocodilagem</h2>
+        <p class="card__desc">Digite seu nome para iniciar o teste. Seu resultado será salvo no ranking familiar.</p>
+        <form id="entryForm" class="entry" aria-describedby="entry-desc">
+          <label for="playerName" class="entry__label">Nome</label>
+          <input id="playerName" name="playerName" class="entry__input" type="text" aria-required="true" placeholder="Seu nome (ex: Tio Croco)" required>
+          <div class="entry__actions">
+            <button id="startBtn" class="btn btn--primary" type="submit">Iniciar teste</button>
+            <button id="viewRankingBtn" class="btn btn--secondary" type="button">Ver ranking</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="card card--quiz" id="quizSection" hidden aria-hidden="true">
+      <div class="container">
+        <h2 class="card__title">Questionário de Crocodilagem</h2>
+        <form id="quizForm" class="quiz" aria-describedby="quiz-instructions">
+          <p id="quiz-instructions" class="quiz__desc">Escolha a alternativa que mais combina com você. Cada resposta tem um peso de 🐊 diferente.</p>
+
+<fieldset class="quiz__question">
+  <legend class="quiz__legend">1. Quando alguém manda um áudio engraçado no grupo, você:</legend>
+  <label class="quiz__option"><input type="radio" name="q1" value="20" required> Salva igual o Amauri pra usar a parte engraçada no momento mais aleatório possível</label>
+  <label class="quiz__option"><input type="radio" name="q1" value="10"> Ri na hora e até reaproveita depois, mas sem maldade</label>
+  <label class="quiz__option"><input type="radio" name="q1" value="0"> Só escuta e deixa o áudio viver em paz</label>
+</fieldset>
+
+<fieldset class="quiz__question">
+  <legend class="quiz__legend">2. Você faz churrasco em casa e:</legend>
+  <label class="quiz__option"><input type="radio" name="q2" value="20" required> Não chama ninguém e ainda posta foto da carne</label>
+  <label class="quiz__option"><input type="radio" name="q2" value="10"> Chama só quem estava online na hora</label>
+  <label class="quiz__option"><input type="radio" name="q2" value="0"> Só faz churrasco se for pra chamar todo mundo</label>
+</fieldset>
+
+<fieldset class="quiz__question">
+  <legend class="quiz__legend">3. Você vai para o barzinho e:</legend>
+  <label class="quiz__option"><input type="radio" name="q3" value="20" required> Chama só uma das irmãs e finge que foi algo espontâneo</label>
+  <label class="quiz__option"><input type="radio" name="q3" value="10"> Avisa no grupo em cima da hora</label>
+  <label class="quiz__option"><input type="radio" name="q3" value="0"> Combina antes e tenta incluir todo mundo</label>
+</fieldset>
+
+<fieldset class="quiz__question">
+  <legend class="quiz__legend">4. Você vai visitar a Zuzu e:</legend>
+  <label class="quiz__option"><input type="radio" name="q4" value="20" required> Vai escondido e só manda a foto no sofá mais disputado</label>
+  <label class="quiz__option"><input type="radio" name="q4" value="10"> Chama alguém específico, mas não todos</label>
+  <label class="quiz__option"><input type="radio" name="q4" value="0"> Avisa no grupo e convida geral</label>
+</fieldset>
+
+<fieldset class="quiz__question">
+  <legend class="quiz__legend">5. Quando viaja, você:</legend>
+  <label class="quiz__option"><input type="radio" name="q5" value="20" required> Nem comenta nada e aparece só nas fotos do destino</label>
+  <label class="quiz__option"><input type="radio" name="q5" value="10"> Fala que vai, mas não convida ninguém</label>
+  <label class="quiz__option"><input type="radio" name="q5" value="0"> Convida todo mundo, mesmo sabendo que ninguém vai poder</label>
+</fieldset>
+
+<fieldset class="quiz__question">
+  <legend class="quiz__legend">Nas festas de família, quando o Mathias chega, você:</legend>
+  <label class="quiz__option"><input type="radio" name="qX" value="20" required> Disputa atenção com brinquedo, doce só pra ser o tio(a) favorito(a)</label>
+  <label class="quiz__option"><input type="radio" name="qX" value="10"> Brinca com ele naturalmente, mas não perde a chance de ser lembrado</label>
+  <label class="quiz__option"><input type="radio" name="qX" value="0"> Deixa ele vir até você e curte o momento sem competição</label>
+</fieldset>
+
+<fieldset class="quiz__question">
+  <legend class="quiz__legend">7. No almoço de família, você:</legend>
+  <label class="quiz__option"><input type="radio" name="q7" value="20" required> Reserva matula pra levar pra casa antes de todo mundo repetir 5 vezes</label>
+  <label class="quiz__option"><input type="radio" name="q7" value="10"> Pega um pouco a mais “só por garantia”</label>
+  <label class="quiz__option"><input type="radio" name="q7" value="0"> Só pega depois que todo mundo já comeu tranquilo</label>
+</fieldset>
+
+<fieldset class="quiz__question">
+  <legend class="quiz__legend">8. Quando alguém manda uma foto em algum lugar e você tem o áudio “tão aonde” salvo:</legend>
+  <label class="quiz__option"><input type="radio" name="q8" value="20" required> Usa o áudio na hora, mesmo que seja a décima vez na semana</label>
+  <label class="quiz__option"><input type="radio" name="q8" value="10"> Usa às vezes, só quando encaixa perfeitamente</label>
+  <label class="quiz__option"><input type="radio" name="q8" value="0"> Não usa, acha que já deu desse áudio</label>
+</fieldset>
+
+          <div class="quiz__actions">
+            <button type="submit" class="btn btn--primary">Enviar respostas</button>
+            <button type="button" id="quizReset" class="btn btn--secondary">Refazer teste</button>
+            <button type="button" id="showRankingBtn" class="btn btn--ghost">Ranking completo</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="card card--result" id="resultSection" hidden aria-hidden="true" aria-live="polite">
+      <div class="container">
+        <h2 class="card__title">Resultado</h2>
+        <div class="result__meta">
+          <div class="result__name" id="resultName"></div>
+          <div class="result__classification" id="resultLabel"></div>
+        </div>
+        <div class="progress" aria-hidden="false">
+          <div class="progress__bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+            <span class="progress__percent" id="progressPercent">0%</span>
+          </div>
+        </div>
+        <p class="result__text" id="resultText"></p>
+        <div class="result__actions">
+          <button id="redoBtn" class="btn btn--secondary">Refazer teste</button>
+          <button id="viewRankingAfterBtn" class="btn btn--primary">Ver ranking</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card card--ranking" id="rankingSection" hidden aria-hidden="true">
+      <div class="container">
+        <h2 class="card__title">Ranking da Família Crocodilo</h2>
+        <div id="rankingList" class="ranking" role="table" aria-label="Ranking de crocodilagem"></div>
+        <div class="ranking__actions">
+          <button id="closeRankingBtn" class="btn btn--secondary">Fechar ranking</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">© Crocodilo Analytics — Sincronizado com a Nuvem Crocodilo</div>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  
+  <script>
+    const _supabaseUrl = 'COLE_AQUI_SUA_URL';
+    const _supabaseKey = 'COLE_AQUI_SUA_ANON_KEY';
+    const supabase = window.supabase.createClient(_supabaseUrl, _supabaseKey);
+  </script>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
